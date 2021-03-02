@@ -34,12 +34,11 @@ if __name__ == '__main__':
     listmage = get_suffix_file('/Downloads/image/')
     TruelistDir="/Downloads/image/Trueimage/"
     FalselistDir="/Downloads/image/Falseimage/"
-    Badimagedir="/Downloads/image/badimage/"
+    Badimagedir="/Downloads/image/Badimage/"
     Trueimagelist = []
     Falseimagelist = []
     for mage in listmage:
         try:
-            onemage = mage.split('/')[-1]
             status = check_image_is_vague(mage)
             if status == True:
                 Trueimagelist.append(mage)
